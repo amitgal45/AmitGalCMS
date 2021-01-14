@@ -1,0 +1,35 @@
+    <div dir="rtl" #myModal class="container" style="border-radius: 20px;" >
+    <div class="content" *ngIf="post" style="border-radius: 20px;padding-bottom:10px;">
+      <h2 style="text-align: center;">הוספת תגובה</h2><br>
+      <form (ngSubmit)="edit(f)" #f="ngForm">
+      <table>
+        <tr>
+          <td>כותרת:</td>
+          <td><input type="text" ngModel [(ngModel)]="post.title" name="title"  required></td>
+        </tr>
+        <tr>
+          <td>תיאור:</td>
+          <td><input type="text" ngModel [(ngModel)]="post.description" name="description" required ></td>
+        </tr>
+        <tr>
+          <td>תוכן:</td>
+          <td><input style="height: 50px;width:300px;padding-left:0;
+            padding-top:0;
+            padding-bottom:0.3em;
+            padding-right: 0.3em;" type="text" ngModel [(ngModel)]="post.body" name="body" required ><br/>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button style="margin-left:5px;" class="button" type="submit">ערוך פוסט</button>
+
+        <button (click)="close()">סגור</button>
+          </td>
+        </tr>
+      </table>
+          </form>
+          
+    </div>
+    </div>
+  `

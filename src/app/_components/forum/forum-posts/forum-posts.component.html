@@ -1,0 +1,134 @@
+<div class="row" style="background-color: white;margin-top:0px;margin-bottom: 0px;">
+    <div class="col-1" style="padding-right:1rem;">
+        <img src="{{forum.img}}" style="height:100%;width:100%;border-radius:100px;">
+    </div>
+    <div class="col-3" style="padding-right:1rem;" *ngIf="forum">
+        <div style="display: flex;height: 100%;">
+            <h1 style="display: inline-block;align-self: center;">{{forum.name}}</h1>
+        </div>
+    </div>
+    <div class="col">
+        <div style="height: 100%;">
+            <div style="display: flex;align-items: center;">
+                <span>
+                    <h3>תיאור:</h3>
+                    {{forum.description}}
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-1">
+        <div style="display: flex;align-items:flex-end;justify-items:flex-end;height: 100%;width:100%">
+            <input type="button" value="הוסף פוסט" (click)="addPostNavigation()">
+        </div>
+    </div>
+</div>
+<div class="row" style="padding-top:1px;background-color: white;">
+    <div class="col-12 topmenunew" style="margin-top:0px;background-color: white;">
+        <div class="row" style="max-height:70px; background-color: rgb(255, 241, 202);font-weight: bold;">
+
+            <div class="col-7"
+                style="justify-items: center;align-content: center;text-align: right;margin:auto;padding-right:2%;">
+                אשכולות נעוצים
+            </div>
+            <div class="col-3"
+                style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
+                סטטיסטיקה
+            </div>
+            <div class="col-2" style="max-height:40px;">
+                הודעה אחרונה
+            </div>
+        </div>
+    </div>
+    <div class="col-12 topmenunew" *ngFor="let post of $filteredposts| isStuck:true" style="margin-top:0px;margin-bottom: 10px;font-weight: bold;background-color: white;">
+        <div class="row" style="max-height:70px; background-color: white;">
+            <div class="col-1" style="justify-items: center;align-content: center;text-align: center;">
+                <img src="{{post.icon?post.icon:'https://i.imagesup.co/sz/100x-/images/0__05a731bf733382.jpg'}}"
+                    style="width:40px;height:40px;border-radius: 50%;margin:auto;">
+            </div>
+            <div class="col-1" style="margin: auto;text-align: center;vertical-align:middle;">
+                <img src="https://aux2.iconspalace.com/uploads/new-post-icon-256.png" style="width:20px;height:20px;">
+            </div>
+            <div class="col-5" style="justify-items: center;align-content: center;text-align: right;margin:auto;">
+                דיון|<a [routerLink]="[ '/forum/post', post.id ]" (click)="onClick(post.id)">{{post.title}}</a><br>
+                פורסם ע"י: {{post.user.username}}
+            </div>
+            <div class="col-3"
+                style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
+
+                צפיות:{{post.views}}
+                תגובות:{{post.commentsnumber}}
+            </div>
+            <div class="col-2" style="max-height:40px;">
+                פעילות אחרונה:
+                {{post.lastComment.username}},<br> בשעה : {{post.lastComment.createdAt|date}}
+            </div>
+        </div>
+    </div>
+    <div class="col-12 topmenunew" style="margin-top:0px;margin-bottom:10px;background-color: white;">
+        <div class="row" style="max-height:70px; font-weight: bold;background-color: rgba(184, 184, 184, 0.274);">
+
+            <div class="col-7"
+                style="justify-items: center;align-content: center;text-align: right;margin:auto;padding-right:2%;">
+                אשכול / מפרסם האשכול
+            </div>
+            <div class="col-3"
+                style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
+                סטטיסטיקה
+            </div>
+            <div class="col-2" style="max-height:40px;">
+                הודעה אחרונה
+            </div>
+        </div>
+    </div>
+    <div class="col-12" *ngFor="let post of $filteredposts| isStuck:false" style="margin-top:0px;margin-bottom: 10px;background-color: white;">
+        <div class="row topmenunew" style="max-height:70px; background-color: white;">
+            <div class="col-1" style="justify-items: center;align-content: center;text-align: center;">
+                <img src="{{post.icon?post.icon:'https://i.imagesup.co/sz/100x-/images/0__05a731bf733382.jpg'}}"
+                    style="width:40px;height:40px;border-radius: 50%;margin:auto;">
+            </div>
+            <div class="col-1" style="margin: auto;text-align: center;vertical-align:middle;">
+                <img src="https://aux2.iconspalace.com/uploads/new-post-icon-256.png" style="width:20px;height:20px;">
+            </div>
+            <div class="col-5" style="justify-items: center;align-content: center;text-align: right;margin:auto;">
+                דיון|<a [routerLink]="[ '/forum/post', post.id ]" (click)="onClick(post.id)">{{post.title}}</a><br>
+                פורסם ע"י: {{post.user.username}}
+            </div>
+            <div class="col-3"
+                style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
+
+                צפיות:{{post.views}}
+                תגובות:{{post.commentsnumber}}
+            </div>
+            <div class="col-2" style="max-height:40px;">
+                פעילות אחרונה:
+                {{post.lastComment.username}},<br> בשעה : {{post.lastComment.createdAt|date}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row" style="margin-top:10px;background-color:white;">
+    <div class="col">
+        <div class="row" style="padding-top:1px;">
+            <div class="col-12" style="margin-top:0px;margin-bottom:1px;">
+                <div class="row" style="max-height:70px; background-color: rgb(255, 241, 202);font-weight: bold;">
+
+                    <div class="col-7"
+                        style="justify-items: center;align-content: center;text-align: right;margin:auto;padding-right:2%;">
+                        אשכול / מפרסם האשכול
+                    </div>
+                    <div class="col-3"
+                        style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
+                        סטטיסטיקה
+                    </div>
+                    <div class="col-2" style="max-height:40px;">
+                        הודעה אחרונה
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div> -->

@@ -1,0 +1,25 @@
+<div class="row" style="max-height:500px;">
+<div  style="background-color: white;position: relative;max-height: 500px;padding-bottom: 10px;" 
+[ngClass]="ExpandCollapse ? 'col-2' : 'col-1'">
+<div class="row" style="margin-bottom: 0px;margin-top: 0px;">
+        <div class="col-12" style="background-color:white;min-height: 60px;margin-bottom: 0px;">
+            <input (click)="expandCollapseFunc()"  type="button"
+          [value]="ExpandCollapse?'close':'open'" style="position: absolute;left: 0px;top:7px;">
+        <h1>לינקים</h1>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-12" style="background-color:white;min-height: 60px;margin-top: 0px;margin-bottom: 0px;">
+
+            <a [routerLink]="['/admin']"> דף ראשי </a><br>
+            <a [routerLink]="[{outlets: {'admin': ['forum']}}]"> הוסף פורום </a><br>
+            <a [routerLink]="[{outlets: {'admin': ['category']}}]"> הוסף קטגוריה </a><br>
+            <a [routerLink]="[{outlets: {'admin': ['users']}}]"> עדכן משתמשים </a><br>
+            <a [routerLink]="[{outlets: {'admin': ['settings']}}]"> הגדרות </a><br>            </div>
+               
+    </div>
+</div>
+    <div [ngClass]="ExpandCollapse ? 'col-10' : 'col-11'" style="position: relative;overflow-y: auto;max-height: 500px;padding-bottom: 10px;" >
+        <router-outlet name="admin"></router-outlet>
+</div>
+</div>

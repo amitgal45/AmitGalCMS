@@ -1,0 +1,11 @@
+
+
+[
+{ "id": 1, "name": "כללי", "icon": "http://www.myforum.co.il/img/caat62.png" },
+{ "id": 2, "name": "ספורט", "icon": "http://www.myforum.co.il/img/caat5.png" },
+{ "id": 3, "name": "סרטים ותוכניות", "icon": "http://www.myforum.co.il/img/caat53.png" },
+{ "id": 4, "name": "חומרה", "icon": "http://www.myforum.co.il/img/caat55.png" },
+{ "id": 5, "name": "עיצוב", "icon": "http://www.myforum.co.il/img/caat21.png" }
+]
+
+

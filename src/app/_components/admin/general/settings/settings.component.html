@@ -1,0 +1,33 @@
+<div class="row" style="margin-top: 0px;margin-bottom: 0px;">
+<div class="col-12" style="background-color: white;margin-bottom: 0px;
+    ">
+    <h1 style="vertical-align: center;">הגדרות כלליות</h1>
+    <hr style="margin-top:-15px;width:99%;"><br>
+    <h3 style="color:rgb(163, 163, 163);margin-top: -25px;padding-right: 5px;">דף לעריכת הגדרות כלליות של האתר</h3>
+
+    <form style="padding-top:20px" (ngSubmit)="onUpdateSettings(f)" #f="ngForm">
+      <table>
+        <tr>
+          <td>כותרת האתר: </td>
+          <td><input type="text" ngModel name="title" required></td>
+        </tr>
+        <tr>
+          <td>כותרת האתר:</td>
+          <td><input type="text" ngModel name="header" required></td>
+        </tr>
+        <tr>
+          <td>לוגו האתר:</td>
+          <td><input type="text" ngModel name="imageUrl" required></td>
+        </tr>
+        <tr>
+          <td>תיאור האתר: </td>
+          <td><input type="text" ngModel name="description" required></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button type="submit">Update Settings</button></td>
+        </tr>
+      </table>
+    </form>
+</div>
+</div>

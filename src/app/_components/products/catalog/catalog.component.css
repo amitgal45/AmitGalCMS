@@ -1,0 +1,49 @@
+.un {
+    display: inline-block;
+  }
+  
+  .un::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+  }
+  
+  .un:hover::after {
+    width: 100%;
+  }
+
+  The ul container element has the class .pagination
+.page-item{
+  background-color: blue;
+}
+.first-item{background-color: chartreuse;}
+.last-item{background-color: chartreuse;}
+.previous-item{background-color: chartreuse;}
+.next-item{background-color: chartreuse;}
+.number-item{background-color: chartreuse;}
+.page-link{background-color: chartreuse;}
+
+
+.pb-0,
+.py-0 {
+  padding-bottom: 0 !important;
+}
+
+.pt-3,
+.py-3 {
+  padding-top: 1rem !important;
+}
+
+
+
+.pagination {display: flex;background-color: chartreuse;}
+.pagination .page-item{display: flex;}
+.pagination .page-item{display: flex;}
+.pagination .number-item{display: flex;}
+.pagination .first-item{display: flex;}
+.pagination .last-item{display: flex;}
+.pagination .previous-item{display: flex;}
+.pagination .next-item{display: flex;}

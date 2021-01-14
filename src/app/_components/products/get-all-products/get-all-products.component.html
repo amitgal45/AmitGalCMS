@@ -1,0 +1,43 @@
+<div style="width: 100%;z-index: 6;margin-bottom: 20px;">
+    <p>All Products</p>
+    <form (ngSubmit)="onAddProduct(f)" #f="ngForm">
+        <input type="text" ngModel name="productName" required>
+        <button type="submit">Add Product</button>
+    </form>
+    <div dir="rtl" class="row" style="width: 100%;">
+        <div class="col-3 categoryname">
+            <p class="center font-size-30">שם קטגוריה</p>
+        </div>
+        <div class="col-3 productstyle" *ngFor="let product of _products">
+            <div>
+            <div style="height:80px;width: 80px;margin:auto;">
+                <img src="{{product.imageUrl}}" style="width: 100%;height: 100%;">
+            </div>
+            <span>
+                {{product.name}}
+                {{product.isAvaliable}}
+                {{product.price}}
+            </span>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div style="width: 100%;z-index: 6;">
+    <!-- <p>All Products</p>
+    <form (ngSubmit)="onAddProduct(f)" #f="ngForm">
+        <input type="text" ngModel name="productName" required>
+        <button type="submit">Add Product</button>
+    </form> -->
+    <div dir="rtl" class="row" style="width: 100%;margin-bottom: 20px;">
+        <div class="col-3 categoryname">
+            <p class="center font-size-30">שם קטגוריה</p>
+        </div>
+        <div class="col-3 productstyle" *ngFor="let product of _products">
+            <div style="height:80px;width: 80px;margin:auto;">
+                <img src="{{product.imageUrl}}" style="width: 100%;height: 100%;">
+            </div>
+            <p>{{product.name}}</p>
+        </div>
+    </div>
+</div>

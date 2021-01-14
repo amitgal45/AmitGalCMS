@@ -1,0 +1,23 @@
+<div>
+    <!-- {id:3,name:'Puma',category:'bzaat',imageUrl:'https://www.pngfind.com/pngs/m/146-1460480_color-brilliancy-mens-puma-benny-black-white-textile.png',isAvaliable:true,price:30} -->
+    <p>Add Product</p>
+    <form (ngSubmit)="onAddProduct(f)" #f="ngForm">
+        <input type="number" ngModel name="id" required>
+        <input type="text" ngModel name="name" required><br/>
+        <input type="text" ngModel name="category" required><br/>
+        <input type="text" ngModel name="imageUrl" required><br/>
+        <input type="radio" id="true" ngModel name="isAvaliable" value=true>
+        <label for="true">Male</label>
+        <input type="radio" id="false" ngModel name="isAvaliable" value=false>
+        <label for="false">Female</label><br>
+        <input type="number" ngModel name="price" required>
+
+        <!-- <input type="radio" id="other" ngModel name="gender" value="other">
+        <label for="other">Other</label> -->
+        <!-- <input type="text" ngModel name="password" required>
+        <input type="text" ngModel name="username" required>
+        <input type="text" ngModel name="password" required> -->
+        <button type="submit">Add Product</button>
+      </form>
+
+</div>

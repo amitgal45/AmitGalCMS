@@ -1,0 +1,12 @@
+.product-card{
+    opacity: 0.6;
+    transition: 0.3s;
+    background-color: white;text-align: center;margin-top: 0;margin-bottom: 0px;padding-top:10px;height:400px;
+}
+
+.product-card:hover{
+    
+    opacity: 1;
+    border:1px solid rgba(160, 160, 160, 0.835);
+}
+

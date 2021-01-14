@@ -1,0 +1,86 @@
+<div class="row">
+<div class="col-12" style="background-color:white">
+<h1>סטטיסטיקות</h1>
+</div>
+<div class="row" *ngIf="counts" style="text-align: center;" >
+<div class="col-2" style="background-color:white;border-radius: 30px;min-height: 100px;padding-top: 10px;margin-right: 20px;">
+    <img src="https://ps.w.org/wp-postviews/assets/icon.svg?rev=978002" style="height:40px;width:50px;margin:auto;"/><br>
+    סה"כ צפיות בפוסטים: <br>
+    {{counts.ViewsInPosts}}
+</div>
+<div class="col-2" style="background-color:white;border-radius: 30px;min-height: 100px;padding-top: 10px;">
+    
+    <img src="https://www.flaticon.com/svg/static/icons/svg/47/47774.svg" style="height:40px;width:50px;margin:auto;"/><br>
+
+    סה"כ משתמשים רשומים: <br>
+    {{counts.usersCount}}
+</div>
+<div class="col-2" style="background-color:white;border-radius: 30px;min-height: 100px;padding-top: 10px;"
+>
+    
+    <img src="https://www.flaticon.com/svg/static/icons/svg/47/47774.svg" style="height:40px;width:50px;margin:auto;"/><br>
+
+    סה"כ משתמשים רשומים: <br>
+    {{counts.usersCount}}
+</div>
+<div class="col-2" style="background-color:white;border-radius: 30px;min-height: 100px;padding-top: 10px;margin-left: 20px;">
+    
+    <img src="https://assets.dryicons.com/uploads/icon/svg/6829/52df9d4a-4c19-4d2b-8256-c8bfa910aadb.svg" style="height:40px;width:50px;margin:auto;"/><br>
+
+    סה"כ פוסטים באתר: <br>
+    {{counts.postsCount}}
+</div>
+</div>
+<div class="col-12" style="background-color:white;min-height: 60px;">
+    <h1>דירוגים</h1>
+</div>
+<div class="row" style="padding-top: 10px;" >
+    <div class="col-3" style="background-color:white;border-radius: 30px;min-height: 100px;padding-top: 10px;padding-bottom: 20px;margin-right: 20px;">
+        <h3 style="text-align: center;">המפרסמים המובילים</h3>
+        <table style="margin-right:20px">
+            <tr>
+                <td>#</td>
+                <td>שם משתמש</td>
+                <td>כמות</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>amitgal2</td>
+                <td>10</td>
+            </tr>
+        </table>
+        </div>
+        
+            <div class="col-3" style="background-color:white;border-radius: 30px;min-height: 100px;padding-top: 10px;padding-bottom: 20px;">
+                <h3 style="text-align: center;">הפוסטים המובילים</h3>
+                <table style="margin-right:20px">
+                    <tr>
+                        <td>#</td>
+                        <td>שם משתמש</td>
+                        <td>כמות תגובות</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>amitgal2</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                </div>
+                <div class="col-3" style="background-color:white;border-radius: 30px;min-height: 100px;padding-top: 10px;padding-bottom: 20px;margin-left: 20px;">
+                    <h3 style="text-align: center;">הפורומים המובילים</h3>
+                    <table style="margin-right:20px">
+                        <tr>
+                            <td>#</td>
+                            <td>שם פורום</td>
+                            <td>כמות פוסטים</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>amitgal2</td>
+                            <td>10</td>
+                        </tr>
+                    </table>
+                    </div>
+
+</div>
+</div>

@@ -1,0 +1,41 @@
+<div class="row">
+<div class="col-12" style="background-color: white;padding-bottom: 20px;
+    ">
+    <h1 style="vertical-align: center;">ערוך או הוסף משתמשים</h1>
+    <hr style="margin-top:-15px;width:99%;"><br>
+    <h3 style="color:rgb(163, 163, 163);margin-top: -25px;padding-right: 5px;">בדף זה תוכלו לחפש , להוסיף ,לערוך ולמחוק משתמשים</h3>
+
+<table style="font-size: 20px;text-align: center;margin:auto;margin-top: 20px;width:90%;border: 1px solid #dbdbdb;">
+    <tr>
+        <td style="width:10%;">חיפוש משתמש</td>
+        <td><input type="text"></td>
+        <td><input type="submit"></td>
+
+    </tr>
+    <tr style="background-color: rgb(209, 209, 209);">
+        <th style="width: 13%;">#</th>
+        <th style="width: 15%;">שם משתמש</th>
+        <th style="width: 15%;">סיסמא</th>
+        <th style="width: 15%;">תפקיד</th>
+        <th style="width: 15%;">ערוך</th>
+        <th style="width: 15%;">מחק</th>
+    </tr>
+    <tr *ngFor="let user of _users" >
+        <td style="width: 10%;">{{user.id}}</td>
+        <td style="width: 15%;">{{user.username}}</td>
+        <td style="width: 15%;">{{user.password}}</td>
+        <td style="width: 15%;">{{user.role}}</td>
+        <td style="width: 15%;">ערוך</td>
+        <td style="width: 15%;"><a (click)="onDeleteProduct(user.id)">מחק</a></td>
+
+    </tr>
+</table>
+</div>
+</div>
+<div class="row" style="margin-bottom:0px">
+<div class="col-12" style="background-color: white;margin-bottom:0px">
+    <admin-add-user></admin-add-user>
+    </div>
+</div>
+
+<!-- <app-add-user></app-add-user> -->

@@ -1,0 +1,127 @@
+<div class="row" style="background-color: #fff;margin-top:0px;margin-bottom:0px;">
+    <div class="col-7" style="margin-top:0px;margin-bottom:0px;">
+        <app-imagepicker [imageArr]="_product.images"></app-imagepicker>
+    </div>
+    <div class="col-5" style="padding-right: 5%;padding-left: 5%;">
+        <h1><b>{{_product.name}}</b></h1>
+        <h4>{{_product.category}}</h4>
+        <h4>{{_product.price}} ILS</h4>
+        <hr>
+        <h6>
+            צבע : 
+            <app-colors [colors]="_product.colors"></app-colors>
+        </h6>
+        <h6>בחר סוג מידה:</h6>
+        <select [(ngModel)]="_sizeOption">
+            <option value="0">בחר סוג מידה</option>
+            <option value="1">אירופה</option>
+            <option value="2">ארהב</option>
+            <option value="3">בריטניה</option>
+        </select>
+        <h6>מידה :</h6>
+        <span [ngSwitch]="_sizeOption">
+        <select ([ngModel])="_size" *ngSwitchCase="1">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+        <select ([ngModel])="_size" *ngSwitchCase="2">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+        <select ([ngModel])="_size" *ngSwitchCase="3">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+        <p *ngSwitchDefault>
+        NONE
+        </p>
+        </span>
+<h6>כמות:</h6>
+<input #quantity type="number"/>
+    
+    <br><br>
+    <div (click)="addToCart(quantity.value,_size)" style="height:60px;width:100%;background-color: black;color:white;display: flex;align-items: center;justify-content: center;">
+        <p style="text-align: center;font-size: 24px;">הוסף לסל</p>
+    </div>
+    <div style="height:60px;width:100%;border:1px solid black;display: flex;align-items: center;justify-content: center;">
+        <p style="text-align: center;font-size: 24px;">שמור למועד מאוחר יותר</p>
+    </div>
+
+    <br><br>
+
+    <div style="height:60px;width:100%;border:1px solid black;display: flex;align-items: center;justify-content: center;position: relative;">
+        
+        <div style="width: 100%;align-self:flex-start;position: absolute;">
+            <img src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png" style="width:24px;height:24px"/>
+        </div>
+
+        <p (click)="detailsClicked()" style="text-align: center;font-size: 24px;">פרטים על המוצר</p>
+    </div>
+    <div *ngIf="isDetailsClicked" style="width:100%;border:1px solid black;border-top:0px solid black;display: flex;align-items: center;justify-content: center;">
+        <p style="text-align: center;font-size: 14px;">
+            Relaxed-fit trench with a unique leather-look finsih.
+            Notched lapel
+            Long sleeves
+            Chest patch pockets
+            Tie waist
+            Waist patch pockets
+            Polyester/elastane
+            Dry clean
+            Imported
+            
+            SIZE & FIT
+            About 45" from shoulder to hem
+            Model measurements: 5'10" tall
+            Model is wearing a US size Small
+            Style Code: 0400013336186
+        </p>
+    </div>
+
+    <div style="height:60px;width:100%;border:1px solid black;display: flex;align-items: center;justify-content: center;position: relative;">
+        
+        <div style="width: 100%;align-self:flex-start;position: absolute;">
+            <img src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png" style="width:24px;height:24px"/>
+        </div>
+
+        <p (click)="shippingClicked()" style="text-align: center;font-size: 24px;">מדיניות החזרים</p>
+    </div>
+    <div *ngIf="isShippingClicked" style="width:100%;border:1px solid black;border-top:0px solid black;display: flex;align-items: center;justify-content: center;">
+        <p style="text-align: center;font-size: 14px;">
+            Relaxed-fit trench with a unique leather-look finsih.
+            Notched lapel
+            Long sleeves
+            Chest patch pockets
+            Tie waist
+            Waist patch pockets
+            Polyester/elastane
+            Dry clean
+            Imported
+            
+            SIZE & FIT
+            About 45" from shoulder to hem
+            Model measurements: 5'10" tall
+            Model is wearing a US size Small
+            Style Code: 0400013336186
+        </p>
+    </div>
+
+
+    </div>
+    <div class="col-12" style="margin-top:0px;margin-bottom:0px;padding-bottom: 40px;">
+       <h3 style="text-align: center;"> <b>אתה עשוי להתעניין ב:</b></h3>
+        <app-scroll-slideshow-item ></app-scroll-slideshow-item>
+    </div>
+    <div class="col-12" style="margin-top:0px;margin-bottom:0px;padding-bottom: 40px;text-align: center;">
+        <h3 style="text-align: center;"> <b>חוות דעת:</b></h3>
+אין
+     </div>
+</div>

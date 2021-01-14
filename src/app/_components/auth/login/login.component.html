@@ -1,0 +1,33 @@
+<div class="row" style="background-color: white;margin-bottom:0px;margin-top:0px;">
+  <div class="col-12">
+    <div class="topmenunew" style="display:flex;justify-content:center;align-items:center;border-radius: 20px;width:70%;margin:auto;margin-bottom:0px;margin-top:10px;height: 60px;">
+      <!-- {id:3,name:'Puma',category:'bzaat',imageUrl:'https://www.pngfind.com/pngs/m/146-1460480_color-brilliancy-mens-puma-benny-black-white-textile.png',isAvaliable:true,price:30} -->
+      <h3 style="text-align:center;font-weight: bold;">התחבר</h3>
+    </div>
+  </div>
+  <div class="col-12" style="margin-top: 10px;margin-bottom:20px;">
+    <div class="topmenunew" style="width:60%;margin:auto;display:flex;flex-direction:column;justify-content:center;padding-bottom: 10px;border-radius: 20px;position: relative;min-height: 300px;">
+      <img style="height:200px;width:200px;position:absolute;left:60px;" src="https://cdn0.iconfinder.com/data/icons/IS_CMS/256/user_login.png" alt="">
+      <p style="padding-right: 20px;font-size: 18px;">שלום אורח,<br>
+         הכנס שם משתמש וסיסמא כדי להתחבר</p>
+      <form (ngSubmit)="onLogin(f)" #f="ngForm">
+        <table  style="padding-right:20px;font-size: 18px;margin-bottom: 30px;">
+          <tr>
+            <td style="margin-left:5px;">שם משתמש</td>
+            <td><input type="text" ngModel name="username" required></td>
+          </tr>
+          <tr>
+            <td style="margin-left:5px;">סיסמא</td>
+            <td><input type="text" ngModel name="password" required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><button style="width:100%" type="submit">התחבר</button></td>
+          </tr>
+        </table>
+          <!-- <input type="text" ngModel name="password" required> -->
+        </form>
+  
+  </div>
+  </div>
+</div>

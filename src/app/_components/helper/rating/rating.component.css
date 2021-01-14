@@ -1,0 +1,9 @@
+.img{
+    max-height:20px;max-width:20px;
+}
+
+#rating1:hover,#rating2:hover,#rating3:hover,#rating4:hover,#rating5:hover{
+    /* background-color:blue; */
+    filter: invert(3);
+    fill:black;
+}

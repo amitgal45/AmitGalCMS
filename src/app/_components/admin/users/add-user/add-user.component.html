@@ -1,0 +1,28 @@
+<div>
+    <h1>הוסף משתמש</h1>
+    <hr style="margin-top:-15px;width:99%;">
+    <form (ngSubmit)="onAddUser(f)" #f="ngForm" style="padding-top: 20px;">
+        <table>
+            <tr>
+                <td>מספר משתמש:</td>
+                <td><input type="number" ngModel name="id" required></td>
+            </tr>
+            <tr>
+                <td>שם משתמש:</td>
+                <td><input type="text" ngModel name="username" required></td>
+            </tr>
+            <tr>
+                <td>סיסמא:</td>
+                <td><input type="text" ngModel name="password" required></td>
+            </tr>
+            <tr>
+                <td>תפקיד:</td>
+                <td><input type="text" ngModel name="role" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">הוסף משתמש</button></td>
+            </tr>
+        </table>
+    </form>
+</div>

@@ -1,0 +1,143 @@
+<div class="row" style="margin-bottom: 0px;margin-top: 0px;z-index:1;padding-bottom: 0px;padding-top:0px;" >
+
+    <div dir="rtl" class="col-12" *ngIf="post$" style="margin-top: 0px;margin-bottom:0px;padding-bottom:10px;padding-top:10px;"  >
+        <div class="row topmenunew" style="width: 99%;margin:auto;background-color:rgb(255, 255, 255);max-height:100px;height:100%;border-radius:20px;margin-top: 0px;margin-bottom: 10px;">
+            <div class="col-1 " style="padding-right:1rem;margin-top: 0px;margin-bottom: 0px;">
+                <div style="display: flex;height: 100%;justify-content: center;align-items: center;"> 
+                <!-- <div style="height:80px;width:80px;"> -->
+                    <div >
+                    <img src="https://i.imagesup.co/sz/100x-/images/0__05a731bf733382.jpg"
+                        style="height:60px;width:60px;border-radius:100px;" class="topmenunew">
+                </div>
+            </div>
+            </div>
+            <div class="col-4" style="display: flex;align-items:center;justify-content:right;height: 100%;margin-top: 0px;margin-bottom: 0px;">
+                    <p style="font-size: 36px;padding-top: 0px;margin:0px">דיון|{{post$.title}}</p><br>
+            </div>
+            <div class="col-2" style="display: flex;align-items:center;justify-content:center;height: 100%;margin-top: 0px;margin-bottom: 0px;padding-top:0px ;">
+                    <p style="font-size: 14px;">{{post$.description}}</p><br>
+            </div>
+            <div class="col" style="display: flex;height: 100%;margin-top: 0px;margin-bottom: 0px;">
+
+            </div>
+
+            <div class="col-2" style="display: flex;align-items:center;justify-content:center;height: 100%;margin-top: 0px;margin-bottom: 0px;">
+                    <!-- <div class="col-12" style="margin-top:0px;margin-bottom:0px;"> -->
+                        <span  style="font-size: 14px;padding-top: 0px;padding-bottom: 0px;margin-top: 0px;margin-bottom: 0px;text-align: center;">דירוג:
+                            <app-rating *ngIf="post$.rating" [rating]="post$.rating"></app-rating>
+
+                        
+                        </span>
+                    
+                    <!-- </div> -->
+                
+                </div>
+        </div>
+        <!-- <div style="display: inline-block;align-self: center;">
+            <span style="font-size: 14px;">{{post$.description}}</span>     
+            </div> -->
+        <!-- <div class="row" style="background-color:rgb(255, 255, 255);max-height: 40px;">
+            <span style="font-size: 14px;padding-right:20px;margin-top:8px;justify-content: center;display: inline-block;
+            vertical-align:top;">{{post$.description}}</span>
+         </div> -->
+        <div class="row" style="margin-top: 0px;margin-bottom:0px;padding-top: 10px;padding-bottom: 10px;" >
+            <!-- <div class="col-2"
+                style="background-color: white;text-align: center;margin-right: 30px;height:100%;width: 100%;;">
+                <div style="height:100px;width:100px;padding-top: 10px;margin: auto;">
+                    <img src="https://pbs.twimg.com/media/EFIv5HzUcAAdjhl?format=png&name=360x360"
+                        style="width: 100%;height: 100%;">
+                </div>
+                <h3>Amit Gal</h3>
+                <p>
+                    תפקיד:אדמין<br>
+                    גיל:24<br>
+                </p>
+            </div>
+            <div class="col-9" style="background-color: white;margin-left: 10px;">
+                <p style="height:73%;">
+                    {{post$.description}}
+                    {{post$.body}}
+                    {{post$.id}}
+                </p>
+                <div style="background-color: teal;padding-left: 30px;height: 10%;">
+                    <p style="padding-right:35px;">נכתב בתאריך:08/12/2020 בשעה: 17:06
+                        <input type="button" value="ערוך פוסט" (click)="openModal()">
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+
+    <div dir="rtl" *ngIf="post$" class="col-12" style="margin-top: 0px;margin-bottom:0px;" >
+        <div class="row" >
+            <div class="col-2 topmenunew"
+                style="border-radius:20px;background-color: white;text-align: center;margin-right: 30px;height:100%;width: 100%;padding-top:20px;">
+                <div style="height:100px;width:100px;margin: auto;">
+                    <img src="https://pbs.twimg.com/media/EFIv5HzUcAAdjhl?format=png&name=360x360"
+                        style="width: 100%;height: 100%;">
+                </div>
+                <h3>{{post$.user.username}}</h3>
+                <p>
+                    תפקיד:אדמין<br>
+                    גיל:24<br>
+
+                </p>
+            </div>
+            <div class="col-9 topmenunew" style="background-color: white;margin-left: 10px;border-radius:20px;padding-bottom: 20px;">
+                <p style="height:73%;padding-right:20px;">
+                    {{post$.description}}
+                    {{post$.body}}
+                    {{post$.id}}
+                </p>
+                <div style="background-color: rgba(199, 199, 199, 0.705);padding-left: 30px;">
+                    <p style="padding-right:35px;">נכתב בתאריך:08/12/2020 בשעה: 17:06
+                        <input type="button" value="ערוך פוסט" (click)="openModal()">
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div dir="rtl" *ngFor="let comment of post$.comments" class="col-12">
+        <div class="row " style="margin-top:0px;margin-bottom:0px;"> 
+            <div class="col-2 topmenunew"
+                style="background-color: white;border-radius:20px;text-align: center;margin-right: 30px;height:100%;width: 100%;;">
+                <div style="height:100px;width:100px;margin: auto;">
+                    <img src="https://pbs.twimg.com/media/EFIv5HzUcAAdjhl?format=png&name=360x360"
+                        style="width: 100%;height: 100%;">
+                </div>
+                <h3>{{comment.username}}</h3>
+                <p>
+                    תפקיד:אדמין<br>
+                    גיל:24<br>
+
+                </p>
+            </div>
+            <div class="col-9 topmenunew" style="background-color: white;margin-left: 10px;border-radius:20px;padding-bottom: 20px;">
+                <p style="height:73%;padding-right:20px;">
+                    {{comment.content}}
+                    {{comment.userId}}
+                    {{comment.id}}
+                    {{comment.postId}}
+                </p>
+                <div style="background-color: rgba(199, 199, 199, 0.705);padding-left: 30px;">
+                    <p style="padding-right:35px;">נכתב בתאריך:08/12/2020 בשעה: 17:06
+                        <input type="button" value="מחק תגובה" (click)="onCommentRemove(comment.postId,comment.id)">
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="col-12" style="background-color: white;min-height:250px;">
+        <app-post-comment ></app-post-comment>
+    </div>
+
+</div>
+<app-modal #modal ></app-modal>
