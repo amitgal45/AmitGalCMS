@@ -43,9 +43,9 @@ import { ScrollSlideshowItemComponent } from '../../scroll-slideshow-item/scroll
 })
 export class SliderComponent implements OnInit  {
 
-@Input() slide:Array<any>=new Array<any>({name:'sdsd',model:'sdsd',url:'http://wpdemo.magikthemes.com/linea/wp-content/uploads/sites/2/2017/08/slide-img1.jpg'},
-{name:'xxxxxa',model:'sdsd',url:'http://wpdemo.magikthemes.com/linea/wp-content/uploads/sites/2/2017/08/slide-img2.jpg'},
-{name:'vvvvvf',model:'sdsd',url:'http://wpdemo.magikthemes.com/linea/wp-content/uploads/sites/2/2017/08/slide-img1.jpg'},
+@Input() slide:Array<any>=new Array<any>({name:'sdsd',model:'sdsd',url:"/assets/slider/slide-img1.jpg"},
+{name:'xxxxxa',model:'sdsd',url:'/assets/slider/slide-img2.jpg'},
+{name:'vvvvvf',model:'sdsd',url:''},
 ); // decorate the property with @Input()
 public count:number;
 public sliderObj:any;
