@@ -99,4 +99,18 @@ border-bottom:1px solid black;
   width: 100%;
 }
   
-  
+#draw-border > *{
+  font-size: 12px;
+}
+
+@media (min-width: 1200px) {
+  #draw-border >*{
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  #draw-border>*{
+    font-size: 16px;
+  }
+}

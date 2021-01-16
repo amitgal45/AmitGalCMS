@@ -5,6 +5,34 @@
     border: 1px dashed red;
 }
 
+#check{
+  visibility: hidden;
+}
+span{
+  font-size:16px;
+}
+
+@media (min-width: 576px) {
+  span{
+    font-size:24px;
+  }
+  #check{
+    visibility: visible;
+  }
+}
+@media (min-width: 1200px) {
+  span{
+    font-size:28px
+  }
+  #check{
+    visibility: visible;
+
+  }
+}
+
+
+
+
 .cartDropdown{
   visibility: true;
   transition: max-height 0.15s ease-out;

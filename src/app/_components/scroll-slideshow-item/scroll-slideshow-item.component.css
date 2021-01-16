@@ -1,7 +1,7 @@
 .product-card{
     opacity: 0.6;
     transition: 0.3s;
-    background-color: white;text-align: center;margin-top: 0;margin-bottom: 0px;padding-top:10px;height: 319px;
+    background-color: white;text-align: center;margin-top: 0;margin-bottom: 0px;padding-top:10px;
 }
 
 .product-card:hover{
@@ -50,5 +50,24 @@
     /* background: black; */
     /* transition: 300ms; */
   }
-
+  span{font-size: 16px;}
+  h4{font-size:16px;}
+  
+  
+  
+  @media (min-width: 1200px) {
+    span{
+      font-size:26px;
+    }
+    h4{font-size:24px;}
+  }
+  
+  @media (min-width: 576px) {
+    span{
+      font-size:18px;
+      
+    }
+    h4{font-size:24px;}
+  
+  }
   
