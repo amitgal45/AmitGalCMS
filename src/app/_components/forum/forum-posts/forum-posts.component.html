@@ -1,42 +1,36 @@
-<div class="row" style="background-color: white;margin-top:0px;margin-bottom: 0px;">
-    <div class="col-1" style="padding-right:1rem;">
+<div class="row" style="background-color: white;">
+    <div class="col-xl-1 col-sm-1 col-2" style="padding-right:1rem;">
         <img src="{{forum.img}}" style="height:100%;width:100%;border-radius:100px;">
     </div>
-    <div class="col-3" style="padding-right:1rem;" *ngIf="forum">
+    <div class="col-xl-3 col-sm-3 col-4" style="padding-right:1rem;" *ngIf="forum">
         <div style="display: flex;height: 100%;">
             <h1 style="display: inline-block;align-self: center;">{{forum.name}}</h1>
         </div>
     </div>
-    <div class="col">
-        <div style="height: 100%;">
-            <div style="display: flex;align-items: center;">
-                <span>
-                    <h3>תיאור:</h3>
-                    {{forum.description}}
-                </span>
-
-            </div>
-        </div>
-    </div>
-    <div class="col-1">
+    <div class="col-2 col-xl col-sm" style="display: flex;align-items: center;">
+        <div class="col-xl col-sm col">
+                    <p style="padding: 0;margin:0;">{{forum.description}}</p>
+                </div>
+                </div>
+    <div class="col-xl-1 col-sm-1 col-3">
         <div style="display: flex;align-items:flex-end;justify-items:flex-end;height: 100%;width:100%">
             <input type="button" value="הוסף פוסט" (click)="addPostNavigation()">
         </div>
     </div>
 </div>
 <div class="row" style="padding-top:1px;background-color: white;">
-    <div class="col-12 topmenunew" style="margin-top:0px;background-color: white;">
+    <div class="col-xl-12 col-12 topmenunew" style="margin-top:0px;background-color: white;">
         <div class="row" style="max-height:70px; background-color: rgb(255, 241, 202);font-weight: bold;">
 
-            <div class="col-7"
+            <div class="col-xl-7 col-sm-7 col-7"
                 style="justify-items: center;align-content: center;text-align: right;margin:auto;padding-right:2%;">
                 אשכולות נעוצים
             </div>
-            <div class="col-3"
+            <div class="col-xl-3 col-sm-3 col-3"
                 style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
                 סטטיסטיקה
             </div>
-            <div class="col-2" style="max-height:40px;">
+            <div class="col-xl-2 col-2 lastmessage"  style="max-height:40px;">
                 הודעה אחרונה
             </div>
         </div>
@@ -60,7 +54,7 @@
                 צפיות:{{post.views}}
                 תגובות:{{post.commentsnumber}}
             </div>
-            <div class="col-2" style="max-height:40px;">
+            <div class="col-2 lastmessage" style="max-height:40px;">
                 פעילות אחרונה:
                 {{post.lastComment.username}},<br> בשעה : {{post.lastComment.createdAt|date}}
             </div>
@@ -77,7 +71,7 @@
                 style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
                 סטטיסטיקה
             </div>
-            <div class="col-2" style="max-height:40px;">
+            <div class="col-2 lastmessage" style="max-height:40px;">
                 הודעה אחרונה
             </div>
         </div>
@@ -101,7 +95,7 @@
                 צפיות:{{post.views}}
                 תגובות:{{post.commentsnumber}}
             </div>
-            <div class="col-2" style="max-height:40px;">
+            <div class="col-2 lastmessage" style="max-height:40px;">
                 פעילות אחרונה:
                 {{post.lastComment.username}},<br> בשעה : {{post.lastComment.createdAt|date}}
             </div>

@@ -1,0 +1,18 @@
+
+    #contain{
+        padding-top: 2.5em;
+        width: 90%;height:100%;overflow: hidden;
+        }
+
+@media (min-width: 1200px) {
+    #contain{
+    padding-top: 3.4em;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    #contain{
+        padding-top: 3.4em;
+        }
+  }
+  

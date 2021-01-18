@@ -1,6 +1,6 @@
 <div *ngIf="json!=null">
     <div class="row" style="padding-bottom:30px;background-color: white;">
-        <div class="col-3" *ngFor="let category of json" style="border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+        <div class="col-xl-3 col-sm-3 col-6" *ngFor="let category of json" style="border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
             <div style="background-color: rgb(255, 255, 255);margin-right: 10px;margin-left: 10px;height:100%;">
                 <div style="text-align: center;border-bottom: 1px solid black;background-image: url({{category.icon}});background-size: cover;padding-top: 10px;padding-bottom: 5px;min-height:120px;display: flex;align-items:flex-end;border-top-left-radius: 20px;border-top-right-radius: 20px;">
                     <div style="font-size:24px;font-weight:bold;width:100%;background-color: rgba(255, 255, 255, 0.698);border:1px solid black;">{{category.name}}</div>
