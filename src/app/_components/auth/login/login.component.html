@@ -1,30 +1,30 @@
 <div class="row" style="background-color: white;margin-bottom:0px;margin-top:0px;">
-  <div class="col-12">
+  <div class="col-12 col-6-xl">
     <div class="topmenunew" style="display:flex;justify-content:center;align-items:center;border-radius: 20px;width:70%;margin:auto;margin-bottom:0px;margin-top:10px;height: 60px;">
       <!-- {id:3,name:'Puma',category:'bzaat',imageUrl:'https://www.pngfind.com/pngs/m/146-1460480_color-brilliancy-mens-puma-benny-black-white-textile.png',isAvaliable:true,price:30} -->
       <h3 style="text-align:center;font-weight: bold;">התחבר</h3>
     </div>
   </div>
-  <div class="col-12" style="margin-top: 10px;margin-bottom:20px;">
-    <div class="topmenunew" style="width:60%;margin:auto;display:flex;flex-direction:column;justify-content:center;padding-bottom: 10px;border-radius: 20px;position: relative;min-height: 300px;">
-      <img style="height:200px;width:200px;position:absolute;left:60px;" src="https://cdn0.iconfinder.com/data/icons/IS_CMS/256/user_login.png" alt="">
-      <p style="padding-right: 20px;font-size: 18px;">שלום אורח,<br>
+  <div class="col-6-xl col-12" style="margin-top: 10px;margin-bottom:20px;">
+    <div class="topmenunew loginbox" style="position:relative;" >
+      <img style="height:60%;width:30%;position:absolute;left:60px;" src="https://cdn0.iconfinder.com/data/icons/IS_CMS/256/user_login.png" alt="">
+      <p style="padding-right: 10px;">שלום אורח,<br>
          הכנס שם משתמש וסיסמא כדי להתחבר</p>
       <form (ngSubmit)="onLogin(f)" #f="ngForm">
-        <table  style="padding-right:20px;font-size: 18px;margin-bottom: 30px;">
-          <tr>
-            <td style="margin-left:5px;">שם משתמש</td>
-            <td><input type="text" ngModel name="username" required></td>
-          </tr>
-          <tr>
-            <td style="margin-left:5px;">סיסמא</td>
-            <td><input type="text" ngModel name="password" required></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><button style="width:100%" type="submit">התחבר</button></td>
-          </tr>
-        </table>
+        <div  style="margin-bottom: 30px;display: flex;flex-direction: row;">
+          <div class="row" style="flex-direction: row;justify-content: flex-start;background-color: white;padding: 10px;">
+            <div  class="col-xl-2 col-sm-2 col-12"><p>שם משתמש</p></div>
+            <div class="col-xl-10 col-sm-9 col-12" style="display: flex;align-items: center;"><input type="text" ngModel name="username"  required></div>
+          <!-- </div>
+          <div class="row"> -->
+            <div  class="col-xl-2 col-sm-2 col-12"><p>סיסמא</p></div>
+            <div class="col-xl-10 col-sm-9 col-12" style="display: flex;align-items: center;"><input type="text" ngModel name="password"  required></div>
+          <!-- </div>
+          <div class="row"> -->
+            <div  class="col-xl-2 col-sm-2 col-12"></div>
+            <div class="col-xl-6 col-sm-9 col-4"><button  type="submit">התחבר</button></div>
+          </div>
+        </div>
           <!-- <input type="text" ngModel name="password" required> -->
         </form>
   

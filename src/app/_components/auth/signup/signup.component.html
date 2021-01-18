@@ -5,47 +5,47 @@
       <h3 style="text-align:center;font-weight: bold;">הירשם</h3>
     </div>
   </div>
-  <div class="col-12" style="margin-top: 10px;margin-bottom:20px;">
-    <div class="topmenunew" style="width:60%;margin:auto;display:flex;flex-direction:column;justify-content:center;padding-bottom: 10px;border-radius: 20px;position: relative;min-height: 300px;">
+  <div class="col-6-xl col-12" style="margin-top: 10px;margin-bottom:20px;">
+    <div class="topmenunew loginbox" >
       <img style="height:200px;width:200px;position:absolute;left:27px;" src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/compose-512.png" alt="">
-      <p style="padding-right: 20px;font-size: 18px;">שלום אורח,<br>
+      <p style="padding-right: 20px;">שלום אורח,<br>
          מלא את פרטייך על מנת להרשם</p>
       <form (ngSubmit)="onRegister(f)" #f="ngForm">
-        <table  style="padding-right:20px;font-size: 18px;margin-bottom: 30px;">
-          <tr>
-            <td style="margin-left:5px;">שם משתמש</td>
-            <td><input style="width: 100%;" type="text" ngModel name="username" required></td>
-          </tr>
-          <tr>
-            <td style="margin-left:5px;">סיסמא</td>
-            <td><input style="width: 100%;" type="text" ngModel name="password" required></td>
-          </tr>
-          <tr>
-            <td style="margin-left:5px;">מין</td>
-            <td style="text-align: right;">
+        <div  style="padding-right:20px;padding-left:20px;margin-bottom: 30px;">
+          <div class="row"  style="background-color: white;">
+            <div class="col-xl-2 col-sm-2 col-12" ><p>שם משתמש</p></div>
+            <div class="col-xl-10 col-sm-9 col-12" style="display: flex;align-items: center;"><input style="width: 50%;" type="text" ngModel name="username" required></div>
+          <!-- </tr>
+          <tr> -->
+            <div class="col-xl-2 col-sm-2 col-12"><p>סיסמא</p></div>
+            <div class="col-xl-10 col-sm-9 col-12" style="display: flex;align-items: center;"><input style="width: 50%;" type="text" ngModel name="password" required></div>
+          <!-- </tr>
+          <tr> -->
+            <div class="col-xl-2 col-sm-2 col-12"><p>מין</p></div>
+            <div class="col-xl-10 col-sm-9 col-12" style="display: flex;align-items: center;">
               <input style="margin-left:5px;" type="radio" id="male" ngModel name="gender" value="male">
-              <label style="margin-left:5px;" for="male">זכר</label>
+              <label style="margin-left:5px;" for="male"><p>זכר</p></label>
               <input style="margin-left:5px;" type="radio" id="female" ngModel name="gender" value="female">
-              <label style="margin-left:5px;" for="female">נקבה</label>
+              <label style="margin-left:5px;" for="female"><p>נקבה</p></label>
               <input style="margin-left:5px;" type="radio" id="other" ngModel name="gender" value="other">
-              <label style="margin-left:5px;" for="other">אחר</label>
-            </td>
-          </tr>
-          <tr>
-            <td style="margin-left:5px;">תמונה</td>
-            <td><input style="width:100%" type="text" ngModel name="password" required></td>
-          </tr>
-          <tr style="font-size:14px;">
-            <td style="margin-left:5px;"></td>
-            <td ><input type="checkbox" style="font-size:14px;" ngModel name="agree" required>
-              קראתי את תנאי השימוש באתר ובשירותיו ואני מסכים להם
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><button style="width:100%" type="submit">הירשם</button></td>
-          </tr>
-        </table>
+              <label style="margin-left:5px;" for="other"><p>אחר</p></label>
+            </div>
+          <!-- </tr>
+          <tr> -->
+            <div class="col-xl-2 col-sm-2 col-12"><p>תמונה</p></div>
+            <div class="col-xl-10 col-sm-9 col-12" style="display: flex;align-items: center;"><input style="width:50%" type="text" ngModel name="password" required></div>
+          <!-- </tr>
+          <tr style="font-size:14px;"> -->
+            <div class="col-xl-2 col-sm-2 col-12"></div>
+            <div class="col-xl-10 col-sm-9 col-12" style="display: flex;align-items: center;" ><input type="checkbox" style="font-size:14px;" ngModel name="agree" required>
+              <p>קראתי את תנאי השימוש באתר ובשירותיו ואני מסכים להם</p>
+            </div>
+          <!-- </tr>
+          <tr> -->
+            <div class="col-xl-2 col-sm-2 col-12"></div>
+            <div class="col-xl-10 col-sm-9 col-12" style="display: flex;align-items: center;"><button style="width:50%" type="submit">הירשם</button></div>
+          </div>
+        </div>
           <!-- <input type="text" ngModel name="password" required> -->
         </form>
   
