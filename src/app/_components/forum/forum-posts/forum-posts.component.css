@@ -85,7 +85,7 @@ h1{
     .lastmessage{
         visibility:visible;
         display: flex;
-
+        margin:0;
     }
     h1{
         font-size: 36px;
