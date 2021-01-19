@@ -4,14 +4,14 @@
     </div>
     <div class="col-xl-3 col-sm-3 col-3" style="padding-right:1rem;" *ngIf="forum">
         <div style="display: flex;height: 100%;">
-            <h1 style="display: inline-block;align-self: center;">{{forum.name}}</h1>
+            <h1 style="display: inline-block;align-self: center;font-weight: bold;">{{forum.name}}</h1>
         </div>
     </div>
     <div class="col-3 col-xl col-sm" style="display: flex;align-items: center;">
         <div class="col-xl col-sm col">
-                    <p style="padding: 0;margin:0;">{{forum.description}}</p>
-                </div>
-                </div>
+            <p style="padding: 0;margin:0;">{{forum.description}}</p>
+        </div>
+    </div>
     <div class="col-xl-1 col-sm-1 col-3">
         <div style="display: flex;align-items:flex-end;justify-items:flex-end;height: 100%;width:100%">
             <input type="button" value="הוסף פוסט" (click)="addPostNavigation()">
@@ -24,39 +24,48 @@
 
             <div class="col-xl-7 col-sm-7 col-7"
                 style="justify-items: center;align-content: center;text-align: right;margin:auto;padding-right:2%;">
-                אשכולות נעוצים
+                <h5>אשכולות נעוצים</h5>
             </div>
             <div class="col-xl-3 col-sm-3 col-3"
                 style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
-                סטטיסטיקה
+
+                <h5>סטטיסטיקה</h5>
             </div>
-            <div class="col-xl-2 col-2 lastmessage"  style="max-height:40px;">
-                הודעה אחרונה
+            <div class="col-xl-2 col-2 lastmessage" style="max-height:40px;">
+                <h5>הודעה אחרונה</h5>
             </div>
         </div>
     </div>
-    <div class="col-12 topmenunew" *ngFor="let post of $filteredposts| isStuck:true" style="margin-top:0px;margin-bottom: 10px;font-weight: bold;background-color: white;">
-        <div class="row" style="max-height:70px; background-color: white;">
-            <div class="col-1" style="justify-items: center;align-content: center;text-align: center;">
+    <div class="col-xl-12 col-12 topmenunew" *ngFor="let post of $filteredposts| isStuck:true"
+        style="margin-top:0px;margin-bottom: 10px;font-weight: bold;background-color: white;">
+        <div class="row" style="background-color: white;padding-right:5px;margin-top: 0px;margin-bottom: 0px;">
+
+            <div class="col-xl-1 col-sm-1 col-1"
+                style="justify-items: center;align-content: center;text-align: center;margin:auto;">
                 <img src="{{post.icon?post.icon:'https://i.imagesup.co/sz/100x-/images/0__05a731bf733382.jpg'}}"
                     style="width:40px;height:40px;border-radius: 50%;margin:auto;">
             </div>
-            <div class="col-1" style="margin: auto;text-align: center;vertical-align:middle;">
+            <div class="col-xl-1 col-sm-1 col-2" style="margin: auto;text-align: center;vertical-align:middle;">
                 <img src="https://aux2.iconspalace.com/uploads/new-post-icon-256.png" style="width:20px;height:20px;">
             </div>
-            <div class="col-5" style="justify-items: center;align-content: center;text-align: right;margin:auto;">
-                דיון|<a [routerLink]="[ '/forum/post', post.id ]" (click)="onClick(post.id)">{{post.title}}</a><br>
-                פורסם ע"י: {{post.user.username}}
+            <div class="col-xl-5 col-sm-5 col-5"
+                style="justify-items: center;align-content: center;text-align: right;margin:auto;">
+                <p>דיון|<a [routerLink]="[ '/forum/post', post.id ]" (click)="onClick(post.id)">{{post.title}}</a><br>
+                    פורסם ע"י: {{post.user.username}}
+                </p>
             </div>
-            <div class="col-3"
+            <div class="col-xl-3 col-sm-3 col-4"
                 style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
-
-                צפיות:{{post.views}}
-                תגובות:{{post.commentsnumber}}
+                <p>
+                    צפיות:{{post.views}}
+                    תגובות:{{post.commentsnumber}}
+                </p>
             </div>
-            <div class="col-2 lastmessage" style="max-height:40px;">
-                פעילות אחרונה:
-                {{post.lastComment.username}},<br> בשעה : {{post.lastComment.createdAt|date}}
+            <div class="col-xl-2 col-2 lastmessage">
+                <p>
+                    פעילות אחרונה:
+                    {{post.lastComment.username}},<br> בשעה : {{post.lastComment.createdAt|date}}
+                </p>
             </div>
         </div>
     </div>
@@ -65,39 +74,46 @@
 
             <div class="col-7"
                 style="justify-items: center;align-content: center;text-align: right;margin:auto;padding-right:2%;">
-                אשכול / מפרסם האשכול
-            </div>
-            <div class="col-3"
-                style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
-                סטטיסטיקה
-            </div>
-            <div class="col-2 lastmessage" style="max-height:40px;">
-                הודעה אחרונה
-            </div>
-        </div>
-    </div>
-    <div class="col-12" *ngFor="let post of $filteredposts| isStuck:false" style="margin-top:0px;margin-bottom: 10px;background-color: white;">
-        <div class="row topmenunew" style="max-height:70px; background-color: white;">
-            <div class="col-1" style="justify-items: center;align-content: center;text-align: center;">
-                <img src="{{post.icon?post.icon:'https://i.imagesup.co/sz/100x-/images/0__05a731bf733382.jpg'}}"
-                    style="width:40px;height:40px;border-radius: 50%;margin:auto;">
-            </div>
-            <div class="col-1" style="margin: auto;text-align: center;vertical-align:middle;">
-                <img src="https://aux2.iconspalace.com/uploads/new-post-icon-256.png" style="width:20px;height:20px;">
-            </div>
-            <div class="col-5" style="justify-items: center;align-content: center;text-align: right;margin:auto;">
-                דיון|<a [routerLink]="[ '/forum/post', post.id ]" (click)="onClick(post.id)">{{post.title}}</a><br>
-                פורסם ע"י: {{post.user.username}}
+                <h5>אשכול / מפרסם האשכול</h5>
             </div>
             <div class="col-3"
                 style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
 
-                צפיות:{{post.views}}
-                תגובות:{{post.commentsnumber}}
+                <h5>סטטיסטיקה</h5>
             </div>
             <div class="col-2 lastmessage" style="max-height:40px;">
-                פעילות אחרונה:
-                {{post.lastComment.username}},<br> בשעה : {{post.lastComment.createdAt|date}}
+
+                <h5>הודעה אחרונה</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-12" *ngFor="let post of $filteredposts| isStuck:false"
+        style="margin-top:0px;margin-bottom: 10px;background-color: white;">
+        <div class="row topmenunew" style=" background-color: white;padding-right:5px;">
+            <div class="col-xl-1 col-sm-1 col-1"
+                style="justify-items: center;align-content: center;text-align: center;margin:auto;">
+                <img src="{{post.icon?post.icon:'https://i.imagesup.co/sz/100x-/images/0__05a731bf733382.jpg'}}"
+                    style="width:40px;height:40px;border-radius: 50%;margin:auto;">
+            </div>
+            <div class="col-xl-1 col-sm-1 col-2" style="margin: auto;text-align: center;vertical-align:middle;">
+                <img src="https://aux2.iconspalace.com/uploads/new-post-icon-256.png" style="width:20px;height:20px;">
+            </div>
+            <div class="col-xl-5 col-sm-5 col-5"
+                style="justify-items: center;align-content: center;text-align: right;margin:auto;">
+                <p> דיון|<a [routerLink]="[ '/forum/post', post.id ]" (click)="onClick(post.id)">{{post.title}}</a><br>
+                    פורסם ע"י: {{post.user.username}}</p>
+            </div>
+            <div class="col-xl-3 col-sm-3 col-4"
+                style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
+                <p>
+                    צפיות:{{post.views}}
+                    תגובות:{{post.commentsnumber}}</p>
+            </div>
+            <div class="col-xl-2 col-sm-2 col-4 lastmessage" style="max-height:40px;">
+                <p>
+                    פעילות אחרונה:
+                    {{post.lastComment.username}},<br> בשעה : {{post.lastComment.createdAt|date}}
+                </p>
             </div>
         </div>
     </div>

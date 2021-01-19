@@ -6,3 +6,82 @@
 .row{
     background-color: rgb(243, 241, 241);
 }
+
+.mobile{
+    display: none;
+    align-items:center;justify-content:center;height: 100%;margin-top: 0px;margin-bottom: 0px;
+}
+
+h1{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+@media (min-width: 576px) {
+    img{
+        visibility: visible;
+      }
+      p{
+        font-size: 16px;
+    }
+    .mobile{
+        display: none;
+    }
+    input{
+        font-size: 16px;
+    }
+    .loginbox{
+        width:60%;
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        position: relative;
+    }
+    .lastmessage{
+        visibility:visible;
+    }
+  }
+  
+@media (min-width: 1200px) {
+    
+    p{
+        font-size: 16px;
+        font-weight: normal;
+
+    }
+    input{
+        font-size: 20px;
+    }
+    .mobile{
+        display: flex;
+    }
+    .loginbox{
+        width:60%;
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        position: relative;
+    }
+    .lastmessage{
+        visibility:visible;
+        display: flex;
+        margin:0;
+    }
+    h1{
+        font-size: 36px;
+    }
+    h5{
+        font-weight: bold;
+        font-size: 14px;
+    }
+  }
+  
+
+  
