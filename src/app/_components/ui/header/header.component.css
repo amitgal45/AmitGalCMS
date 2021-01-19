@@ -12,6 +12,10 @@ span{
   font-size:16px;
 }
 
+.cartDropdown{
+  visibility: hidden;
+}
+
 @media (min-width: 576px) {
   span{
     font-size:24px;
@@ -27,6 +31,9 @@ span{
   #check{
     visibility: visible;
 
+  }
+  .cartDropdown{
+    visibility: visible;
   }
 }
 

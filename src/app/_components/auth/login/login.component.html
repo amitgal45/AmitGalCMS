@@ -6,14 +6,14 @@
     </div>
   </div>
   <div class="col-6-xl col-12" style="margin-top: 10px;margin-bottom:20px;">
-    <div class="topmenunew loginbox" style="position:relative;" >
+    <div class="topmenunew loginbox" style="position:relative;padding-right:20px;padding-top:20px;" >
       <img style="height:60%;width:30%;position:absolute;left:60px;" src="https://cdn0.iconfinder.com/data/icons/IS_CMS/256/user_login.png" alt="">
-      <p style="padding-right: 10px;">שלום אורח,<br>
+      <p >שלום אורח,<br>
          הכנס שם משתמש וסיסמא כדי להתחבר</p>
       <form (ngSubmit)="onLogin(f)" #f="ngForm">
-        <div  style="margin-bottom: 30px;display: flex;flex-direction: row;">
-          <div class="row" style="flex-direction: row;justify-content: flex-start;background-color: white;padding: 10px;">
-            <div  class="col-xl-2 col-sm-2 col-12" style="margin:0;padding:0;"><p>שם משתמש</p></div>
+        <div  style="display: flex;flex-direction: row;margin-top:20px;margin-bottom:20px;padding:0px;">
+          <div class="row" style="flex-direction: row;justify-content: flex-start;background-color: white;">
+            <div  class="col-xl-2 col-sm-2 col-12" style="margin:0px;padding:0px;"><p>שם משתמש</p></div>
             <div class="col-xl-10 col-sm-9 col-12" style="display: flex;align-items: center;margin:0;padding:0;"><input type="text" ngModel name="username"  required></div>
           <!-- </div>
           <div class="row"> -->
@@ -22,7 +22,7 @@
           <!-- </div>
           <div class="row"> -->
             <div  class="col-xl-2 col-sm-2 col-12" style="margin:0;padding:0;"></div>
-            <div class="col-xl-6 col-sm-9 col-4" style="margin:0;padding:0;"><button  type="submit">התחבר</button></div>
+            <div class="col-xl-6 col-sm-9 col-4" style="margin:0;padding:0;"><br/><button  type="submit">התחבר</button></div>
           </div>
         </div>
           <!-- <input type="text" ngModel name="password" required> -->

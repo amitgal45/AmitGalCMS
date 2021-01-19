@@ -1,9 +1,9 @@
 <div class="row" *ngIf="cart" style="background-color: white;align-items: center;margin-top:0px;margin-bottom: 0px;">
     <h2 style="padding-right:3%;padding-bottom:0px;margin-bottom:0px;"> עגלת קניות</h2>
         <div class="row" style="background-color: white;margin-top:0px;margin-bottom: 0px;">
-            <div class="col-xl-8 col-8" style="margin-top:0px;margin-bottom: 0px;">
+            <div class="col-xl-8 col-12" style="margin-top:0px;margin-bottom: 0px;">
                 <hr style="width:90%;margin-right:5%;margin-left: 5%;">
-                <div class="row" *ngIf="cart.length==0" style="background-color: white;justify-content: center;align-items: center;">
+                <div class="row" *ngIf="cart.length==0" style="background-color: white;justify-content: center;align-items: center;margin-top: 0px;margin-bottom: 0px;">
                     <div class="col-xl-12 col-12">
                         <p style="text-align: center;">אין פריטים בסל הקניות</p>
                     </div>
@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-xl-4 col-3"
                         style="margin-top:0px;margin-bottom: 0px;display:flex;justify-content: center;align-items: center;">
-                        <p style="font-size:14px;">
+                        <p >
                             {{product.name}}<br>
                             כמות:{{product.quantity}}<br>
                             מידה:{{product.size}}<br>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-xl-4 col-3"
                         style="margin-top:0px;margin-bottom: 0px;display:flex;justify-content: center;align-items: center;">
-                        <input type="number" (change)="calculateSum()" [(ngModel)]="product.quantity" style="width: 40%;" />
+                        <input type="number" min="0" (change)="calculateSum()" [(ngModel)]="product.quantity" style="width: 40%;" />
                     </div>
                     <div class="col-xl-2 col-2"
                         style="margin-top:0px;margin-bottom: 0px;display:flex;justify-content: center;align-items: center;">
@@ -38,19 +38,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-3" style="margin-top:0px;margin-bottom: 0px;">
+            <div class="col-xl-3 col-12" style="margin-top:0px;margin-bottom: 0px;">
 
                 <hr style="width:90%;margin-right:5%;margin-left: 5%;">
 
                 <div class="row"
-                    style="background-color:white;width:90%;margin-right:5%;margin-left:5%;padding-top:10px;padding-bottom:10px;display:flex;justify-content: center;">
+                    style="background-color:white;width:90%;margin-right:5%;margin-left:5%;padding-top:0px;padding-bottom:0px;display:flex;justify-content: center;margin-top: 0px;margin-bottom: 0px;">
                     <div class="col-xl-12 col-12" style="text-align: center;">
+                        <p><br/>
                         סיכום הזמנה:
                         {{sum}} ש"ח
+                    </p>
                         <br>
                     </div>
                     <div style="justify-content: center;">
-                        <button *ngIf="sum" (click)="checkOut()">
+                        <button (click)="checkOut()" [disabled]="!sum">
                             הזמן עכשיו
                         </button>
                     </div>

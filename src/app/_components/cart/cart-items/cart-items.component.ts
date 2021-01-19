@@ -27,8 +27,8 @@ export class CartItemsComponent implements OnInit {
   calculateSum(){
     this.sum=0
     for(let i:number=0;i<this.cart.length;i++){
-      this.sum = this.sum + (this.cart[i].price*this.cart[i].quantity)
-      console.log(this.cart[i])
+    this.sum = this.sum + (this.cart[i].price*this.cart[i].quantity)
+    console.log(this.cart[i])
     }
   }
 
