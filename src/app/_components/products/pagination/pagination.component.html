@@ -1,45 +1,49 @@
 <div class="row" *ngIf="items" style="justify-content: flex-start;background-color: white;margin-top:0px;margin-bottom:0px;">
-    <div class="col-xl-2">
-        <p>{{categoryName}}</p>
+    <div class="col-xl-2 col-2">
+        <p style="text-align: center;">{{categoryName}}</p>
     </div>
-    <div class="col-xl-2">
-        <p>{{items.length}} תוצאות</p>
+    <div class="col-xl-2 col-3">
+        <p style="text-align: center;">{{items.length}} תוצאות</p>
     </div>
-    <div class="col-xl-3">
+    <div class="col-xl mobile">
+
     </div>
-    <div class="col-xl-2">
-        <p>סינון:<select>
+    <div class="col-xl-2 col-3">
+        <p style="text-align: center;">סינון<br/>
+            <select style="width: 70%;">
             <option value="first">תאריך</option>
             <option value="second" selected>הנצפים ביותר</option>
         </select></p>
     </div>
-    <div class="col-xl-3">
-        <p>
-        החלפת עמודים 
-        <img src="https://www.flaticon.com/svg/static/icons/svg/126/126490.svg" (click)="pageFoward()" style="height:16px;width:16px;">
-
-        <select *ngIf="arrOfPages" [(ngModel)]="currentPage" (change)='setPage(currentPage)' style="margin-right:10px;margin-left:10px;" >
+    
+    <div class="col-xl-4 col-4">
+        <p style="text-align: center;">
+    עמודים<br>
+        <img src="https://www.flaticon.com/svg/static/icons/svg/126/126490.svg" (click)="pageFoward()" style="height:12px;width:12px;">
+        <select *ngIf="arrOfPages" [(ngModel)]="currentPage" (change)='setPage(currentPage)' style="margin-right:5px;margin-left:5px;" >
             <option *ngFor="let i of arrOfPages" value="{{i}}">{{i}}</option>
         </select>
-        <img src="https://www.flaticon.com/svg/static/icons/svg/126/126492.svg" (click)="pageBack()" style="height:16px;width:16px;">
+        <img src="https://www.flaticon.com/svg/static/icons/svg/126/126492.svg" (click)="pageBack()" style="height:12px;width:12px;">
 
     </p>
     </div>
 </div>
 
 <div class="row" style="margin-top:0px;margin-bottom:0px;background-color: white;">
-    <div class="col-xl-12">
+    <div class="col-xl-12 col-12">
         <div class="row" style="background-color: white;">
             <div [routerLink]="['/products',product.id]" class="col-xl-2 col-5 product-card" style="margin:2px;" *ngFor="let product of pageItems">  
                  
                 <div style="height:220px; margin-bottom: 10px;"> 
                     <img src="{{product.imageUrl}}" style="height:100%;width:100%"  />
                 </div>
+                <div>
                 <p>{{product.name}} <br>
                 מחיר:{{product.price}}<br>
-                צבע:<app-colors  [colors]="product.colors"></app-colors><br>
-                <button (click)="addToCart(product)" style="z-index: 20;">הזמן עכשיו</button>
+                צבע:<app-colors  [colors]="product.colors"></app-colors>
+                <button (click)="addToCart(product)" style="z-index: 20;margin-top:10px;margin-bottom:10px;">הזמן עכשיו</button>
                 </p>
+            </div>
             </div>
         
         </div>

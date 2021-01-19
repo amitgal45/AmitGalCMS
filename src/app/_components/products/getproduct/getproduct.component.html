@@ -1,25 +1,25 @@
 <div class="row" style="background-color: #fff;margin-top:0px;margin-bottom:0px;">
-    <div class="col-7" style="margin-top:0px;margin-bottom:0px;">
+    <div class="col-xl-7 col-12" style="margin-top:0px;margin-bottom:0px;">
         <app-imagepicker [imageArr]="_product.images"></app-imagepicker>
     </div>
-    <div class="col-5" style="padding-right: 5%;padding-left: 5%;">
+    <div class="col-xl-5 col-12" style="padding-right: 5%;padding-left: 5%;text-align: center;">
         <h1><b>{{_product.name}}</b></h1>
         <h4>{{_product.category}}</h4>
         <h4>{{_product.price}} ILS</h4>
         <hr>
-        <h6>
+        <h6 style="text-align: center;">
             צבע : 
-            <app-colors [colors]="_product.colors"></app-colors>
+            <app-colors  [colors]="_product.colors"></app-colors>
         </h6>
-        <h6>בחר סוג מידה:</h6>
-        <select [(ngModel)]="_sizeOption">
+        <h6 style="text-align: center;">בחר סוג מידה:</h6>
+        <select style="text-align: center;" [(ngModel)]="_sizeOption">
             <option value="0">בחר סוג מידה</option>
             <option value="1">אירופה</option>
             <option value="2">ארהב</option>
             <option value="3">בריטניה</option>
         </select>
-        <h6>מידה :</h6>
-        <span [ngSwitch]="_sizeOption">
+        <h6 style="text-align: center;">מידה :</h6>
+        <span style="text-align: center;" [ngSwitch]="_sizeOption">
         <select ([ngModel])="_size" *ngSwitchCase="1">
             <option value="XS">XS</option>
             <option value="S">S</option>
@@ -46,22 +46,24 @@
         </p>
         </span>
 <h6>כמות:</h6>
-<input #quantity type="number"/>
+<input #quantity type="number" style="width: 10%;"/>
     
     <br><br>
-    <div (click)="addToCart(quantity.value,_size)" style="height:60px;width:100%;background-color: black;color:white;display: flex;align-items: center;justify-content: center;">
-        <p style="text-align: center;font-size: 24px;">הוסף לסל</p>
+    <div class="row" style="background-color: white;margin:0;padding:0;">
+    <div class="col-xl-12 col-6" (click)="addToCart(quantity.value,_size)" style="height:60px;width:100%;background-color: black;color:white;display: flex;align-items: center;justify-content: center;margin:0;padding:0;">
+        <p style="text-align: center;font-size: 24px;margin:0;padding:0;">הוסף לסל</p>
     </div>
-    <div style="height:60px;width:100%;border:1px solid black;display: flex;align-items: center;justify-content: center;">
-        <p style="text-align: center;font-size: 24px;">שמור למועד מאוחר יותר</p>
+    <div class="col-xl-12 col-6" style="margin:0;padding:0;height:60px;width:100%;border:1px solid black;display: flex;align-items: center;justify-content: center;">
+        <p style="text-align: center;font-size: 24px;margin:0;padding:0;">שמור למועד מאוחר יותר</p>
     </div>
+</div>
 
     <br><br>
 
     <div style="height:60px;width:100%;border:1px solid black;display: flex;align-items: center;justify-content: center;position: relative;">
         
-        <div style="width: 100%;align-self:flex-start;position: absolute;">
-            <img src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png" style="width:24px;height:24px"/>
+        <div style="width: 20%;position: absolute;right:0px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png" style="width:24px;height:24px;"/>
         </div>
 
         <p (click)="detailsClicked()" style="text-align: center;font-size: 24px;">פרטים על המוצר</p>
@@ -88,7 +90,7 @@
 
     <div style="height:60px;width:100%;border:1px solid black;display: flex;align-items: center;justify-content: center;position: relative;">
         
-        <div style="width: 100%;align-self:flex-start;position: absolute;">
+        <div style="width: 20%;align-self:center;position: absolute;right:0px">
             <img src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png" style="width:24px;height:24px"/>
         </div>
 

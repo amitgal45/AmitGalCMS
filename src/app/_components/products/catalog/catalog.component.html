@@ -1,7 +1,7 @@
 <div class="row" style="margin-top:0px;margin-bottom:0px;background-color: white;">
-    <div class="col-2" style="margin-top:0px;margin-bottom:0px;background-color: white;">
+    <div class="col-xl-2 col-3" style="margin-top:0px;margin-bottom:0px;background-color: white;">
 <div class="row" style="margin-bottom: 0px;margin-top: 0px;background-color: white;">
-    <div class="col-12" style="padding-right:5%;border-left:1px solid rgba(39, 39, 39, 0.219);background-color: white;">
+    <div class="col-xl-12 col-12" style="padding-right:5%;border-left:1px solid rgba(39, 39, 39, 0.219);background-color: white;">
         <p>
 <span class="un">החדשים</span><br>
 <span class="un" (click)="onChangePick('שמלות')"> שמלות</span><br>
@@ -34,7 +34,7 @@ Price<br>
 </div>
 </div>
     </div>
-    <div *ngIf="filteredProducts" class="col-10" style="margin-top:0px;margin-bottom:0px;padding-right:5%">
+    <div *ngIf="filteredProducts" class="col-xl-10 col-9" style="margin-top:0px;margin-bottom:0px;padding-right:5%">
         
 <app-pagination style="margin-top:0px;margin-bottom:0px;" [items]="filteredProducts"  [categoryName]="categoryName" (changePage)="onChangePage($event)"></app-pagination>
 
