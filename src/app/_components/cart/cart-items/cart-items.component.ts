@@ -16,6 +16,11 @@ export class CartItemsComponent implements OnInit {
   subscription:Subscription;
   cart:Array<any>;
   sum:number;
+  isAuth(){
+    if(this.sum!=0)
+    return true
+    return false;
+  }
 
 
 
