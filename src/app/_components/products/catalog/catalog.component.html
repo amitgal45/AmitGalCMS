@@ -3,33 +3,12 @@
 <div class="row" style="margin-bottom: 0px;margin-top: 0px;background-color: white;">
     <div class="col-xl-12 col-12" style="padding-right:5%;border-left:1px solid rgba(39, 39, 39, 0.219);background-color: white;">
         <p>
-<span class="un">החדשים</span><br>
+<br>
 <span class="un" (click)="onChangePick('שמלות')"> שמלות</span><br>
-<span class="un">חולצות</span><br>
+<span class="un" (click)="onChangePick('חולצות')">חולצות</span><br>
 <span class="un" (click)="onChangePick('גקטים')">ג'קטים ומעילים</span><br>
-<span class="un">מכנסיים</span><br>
-<span class="un">בגדי ים</span><br>
-<span class="un">ווינטאג'</span><br>
-<span class="un">אביזרים</span><br>
-<span class="un">נעליים</span><br>
-<span class="un">מוצרים</span><br>
-<span class="un">מבצעים</span><br>
+<span class="un" (click)="onChangePick('נעליים')">נעליים</span><br>
 
-שמלות<br>
-חולצות<br>
-ג'קטים ומעילים<br>
-מכנסיים<br>
-בגדי ים<br>
-ווינטאג'<br>
-אביזרים<br>
-נעליים<br>
-מותגים<br>
-מבצעים<br>
-Filter by:<br>
-Size<br>
-Color<br>
-Brand<br>
-Price<br>
 </p>
 </div>
 </div>
@@ -37,21 +16,6 @@ Price<br>
     <div *ngIf="filteredProducts" class="col-xl-10 col-9" style="margin-top:0px;margin-bottom:0px;padding-right:5%">
         
 <app-pagination style="margin-top:0px;margin-bottom:0px;" [items]="filteredProducts"  [categoryName]="categoryName" (changePage)="onChangePage($event)"></app-pagination>
-
-        <!-- <div class="row" style="background-color: white;margin-top:0px;margin-bottom:0px;">
-            <div class="col-2" style="margin:2px;" *ngFor="let product of pageOfItems">  
-                 
-                <div style="height:220px; margin-bottom: 10px;">
-                    <img src="{{product.imageUrl}}" style="height:100%;width:100%;"/>
-                </div>
-                <p>{{product.name}} <br>
-                מחיר:{{product.price}}<br>
-                צבע:<br>
-                </p>
-            </div>
-        <!--  -->
-        
-        <!-- </div> -->
 
         
     </div>

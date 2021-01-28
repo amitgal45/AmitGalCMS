@@ -50,19 +50,19 @@
             </div>
             <div class="col-xl-5 col-sm-5 col-5"
                 style="justify-items: center;align-content: center;text-align: right;margin:auto;">
-                <p>דיון|<a [routerLink]="[ '/forum/post', post.id ]" (click)="onClick(post.id)">{{post.title}}</a><br>
+                <p style="font-weight: bold;">דיון|<a [routerLink]="[ '/forum/post', post.id ]" (click)="onClick(post.id)">{{post.title}}</a><br>
                     פורסם ע"י: {{post.user.username}}
                 </p>
             </div>
             <div class="col-xl-3 col-sm-3 col-4"
                 style="justify-items: center;align-content: center;text-align: center;justify-content: center;vertical-align: middle;margin:auto;">
-                <p>
+                <p style="font-weight: bold;">
                     צפיות:{{post.views}}
                     תגובות:{{post.commentsnumber}}
                 </p>
             </div>
             <div class="col-xl-2 col-2 lastmessage">
-                <p>
+                <p style="font-weight: bold;">
                     פעילות אחרונה:
                     {{post.lastComment.username}},<br> בשעה : {{post.lastComment.createdAt|date}}
                 </p>

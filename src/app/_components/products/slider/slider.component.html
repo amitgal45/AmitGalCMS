@@ -2,8 +2,9 @@
 
 <div class="w3-content w3-display-container" style="width: 100%;height:100%;position: relative;" >
 <div *ngIf="sliderObj" style="text-align: center;background-image:url({{sliderObj.url}});background-repeat: no-repeat;position: relative;  background-position: center;background-size:cover;height:100%;width: 100%;" [@openClose]="string" >
-<div style="width:100%;position: absolute;bottom: 0px;background-color: rgba(255, 255, 255, 0.5);min-height: 20%;text-align: right;">
+<div style="width:100%;position: absolute;bottom: 0px;color:white;background-color: rgba(31, 29, 44, 0.822);min-height: 20%;text-align: right;padding-right:1em;">
     <h1>{{sliderObj.name}}</h1>
+    <h3>{{sliderObj.description}}</h3>
 </div>
 </div>
 <button class="w3-button w3-display-right" style="font-size: 30px;" (click)="moveFoward()">&#10094;</button>
