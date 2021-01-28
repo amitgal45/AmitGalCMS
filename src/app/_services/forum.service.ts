@@ -14,7 +14,7 @@ export class ForumService {
 
   private _forumCategories: Array<Category> = new Array<Category>(
     { id: 1, name: 'כללי', icon: 'http://www.myforum.co.il/img/caat62.png' },
-    { id: 2, name: 'ספורט', icon: 'http://www.myforum.co.il/img/caat5.png' },
+    { id: 2, name: 'ספורט', icon: 'https://i.pinimg.com/600x315/9c/97/3f/9c973fc03f0b6b86647f5a5669724494.jpg' },
     { id: 3, name: 'סרטים ותוכניות', icon: 'http://www.myforum.co.il/img/caat53.png' },
     { id: 4, name: 'חומרה', icon: 'http://www.myforum.co.il/img/caat55.png' },
     { id: 5, name: 'עיצוב', icon: 'http://www.myforum.co.il/img/caat21.png' },

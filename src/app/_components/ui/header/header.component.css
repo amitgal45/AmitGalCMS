@@ -37,6 +37,10 @@ span{
   }
 }
 
+span:hover{
+  color: #959595;
+}
+
 
 
 
