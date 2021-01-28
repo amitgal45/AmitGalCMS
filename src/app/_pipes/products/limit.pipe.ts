@@ -9,19 +9,8 @@ export class LimitPipe implements PipeTransform {
   transform(value: Array<Product>, limitNumber: number,category:string,page:number): unknown {
     // console.log(category)
 
-    let r = value.filter(val=>val.category==category).slice(page,limitNumber)
+    let r = value.filter(val=>val.category==category).slice(page*limitNumber,limitNumber*(page+1))
     let arr:Product[]=new Array<Product>();
-    if(value.length>limitNumber){
-    for(let i:number=0;i<limitNumber;i++){
-      if(value[i].category==category)
-        arr.push(value[i])
-      
-    }
-    return r;
-    }
-    for(let i:number=0;i<value.length;i++){
-      arr.push(value[i])
-    }
     return r;
   }
 
