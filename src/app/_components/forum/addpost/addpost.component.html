@@ -1,14 +1,17 @@
 <div class="row" style="background-color: #FFF;width:auto;">
-  <div class="col" >
+  <div class="col-xl col" >
     <div class="topmenunew" style="display:flex;justify-content:center;align-items:center;border-radius: 20px;width:70%;margin:auto;margin-bottom:20px;margin-top:10px;height: 60px;">
     <!-- {id:3,name:'Puma',category:'bzaat',imageUrl:'https://www.pngfind.com/pngs/m/146-1460480_color-brilliancy-mens-puma-benny-black-white-textile.png',isAvaliable:true,price:30} -->
-    <h3 style="text-align:center;font-weight: bold;">הוסף פוסט לפורום מס' {{forumId}}</h3>
+    <h3 style="text-align:center;font-weight: bold;">הוסף פוסט 
+      
+      <!-- {{forumId}} -->
+    </h3>
   </div>
-  <div class="topmenunew" style="border-radius:20px;position: relative;width: 60%;margin:auto;padding-top: 20px;padding-bottom:20px;margin-bottom:20px;">
-  <img style="position: absolute;left:45px;top:14%;height:150px;width:150px;" src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/keyboard-512.png" alt="">
-    <form (ngSubmit)="onAddPost(f)" #f="ngForm" style="padding-left: 10%;padding-right:10%;">
+  <div class="topmenunew" style="border-radius:20px;position: relative;width: 70%;margin:auto;padding-top: 20px;padding-bottom:20px;margin-bottom:20px;border:1px solid rgba(0, 0, 0, 0.198);">
+  <img class="image_c" style="position: absolute;left:45px;top:14%;height:150px;width:150px;" src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/keyboard-512.png" alt="">
+    <form (ngSubmit)="onAddPost(f)" #f="ngForm" style="padding-left: 20px;" >
         <!-- מס"ד: <input type="number" ngModel name="id" required><br/> -->
-        <table style="background-color: white;width:100%">
+        <table style="width:100%;border-radius: 17px;margin-right: 10px;">
           <tr>
             <td style="text-align: center;">כותרת</td>
             <td><input type="text" ngModel name="title" required></td>
@@ -19,25 +22,25 @@
           </tr>
           <tr>
             <td style="text-align: center;">תוכן</td>
-            <td><input type="text" ngModel name="body" required style="min-height: 70px;min-width: 300px;"></td>
+            <td><input type="text" ngModel name="body" required style="min-height: 40px;"></td>
           </tr>
           <tr>
-            <td></td>
-            <td><input type="file" placeholder="העלאה תמונה" id="FUImage" name="FUImage" accept=".png, .jpg, .jpeg" (change)="handleFileInput($event.target.files)"> 
-              </td>
+            <td style="text-align: center;">תוכן</td>
+            <td><input type="file" style="margin:auto;" placeholder="תמונה" id="FUImage" name="FUImage" accept=".png, .jpg, .jpeg" (change)="handleFileInput($event.target.files)">             </td>
           </tr>
           <tr>
-            <td></td>
-            <td><img src="{{ImageBaseData}}" alt="Selected Image" height="200" width="200"></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><button type="submit" style="text-align: center;margin:auto;">הוסף פוסט</button>
+            <td style="text-align: center;">תוכן</td>
+            <td>          <img src="{{ImageBaseData}}" alt="Selected Image" height="200" width="100%">  
             </td>
           </tr>
-     
-          
+          <tr>
+            <td style="text-align: center;">תוכן</td>
+            <td ><button style="align-self: center;" type="submit" style="text-align: center;margin:auto;">הוסף פוסט</button></td>
+          </tr>
         </table>
+        
+
+
       </form>
     </div>
 

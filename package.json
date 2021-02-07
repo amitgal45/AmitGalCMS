@@ -22,6 +22,7 @@
     "@angular/router": "~10.0.0",
     "@auth0/angular-jwt": "^5.0.2",
     "express": "^4.17.1",
+    "heroku-ssl-redirect": "^0.1.1",
     "jw-angular-pagination": "^1.2.0",
     "jw-paginate": "^1.0.4",
     "ng-image-slider": "^2.6.4",

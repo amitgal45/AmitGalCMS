@@ -1,5 +1,5 @@
 <div dir="rtl" class="row center" style="justify-content:center;z-index: 1;background-color: rgb(255, 255, 255);border: 0px solid black;margin-top: 0px;align-items:center;">
-  <div class="col-xl-1 col-sm-2 col-2" style="padding-top:5px"  >
+  <div class="col-xl-1 col-sm-2 col-2"   >
     <img src="../assets/logo.png" style="width:55%">
 </div>
   <div class="col-2 col-xl-2 col-sm-2" >
@@ -9,12 +9,10 @@
     <div class="col-2 col-xl-2 col-sm-2"  *ngIf="_user==null">
         <span  [routerLink]="[ '/login' ]" >התחבר</span>
     </div>
-    <div class="col-2 col-xl-2 col-sm-2"  *ngIf="_user!=null">
+    <div class="col-3 col-xl-2 col-sm-2"  *ngIf="_user!=null">
         <span  >שלום {{_user.username}}</span>
     </div>
-    <div class="col-2 col-xl-2 col-sm-2"  *ngIf="_user!=null" >
-        <span  [routerLink]="[ '/admin' ]" >דף אדמין</span>
-    </div>
+    
 
     <div class="col-2 col-xl-2 col-sm-2"  *ngIf="_user==null" >
         <span *ngIf="_user==null" [routerLink]="[ '/signup' ]" >הרשם</span>

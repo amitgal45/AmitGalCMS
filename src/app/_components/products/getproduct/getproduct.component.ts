@@ -37,8 +37,13 @@ shippingClicked(){
 }
 
 addToCart(quantity,size){
+  if(quantity>0){
   let cartItem = {...this._product,quantity,size}
   this.productService.addItemToCart(cartItem)
+}
+else{
+  alert("הכמות חייבת להיות יותר מ1")
+}
 }
 
   constructor(
