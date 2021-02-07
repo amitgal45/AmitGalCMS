@@ -25,16 +25,16 @@
             <td><input type="text" ngModel name="body" required style="min-height: 40px;"></td>
           </tr>
           <tr>
-            <td style="text-align: center;">תוכן</td>
+            <td style="text-align: center;"></td>
             <td><input type="file" style="margin:auto;" placeholder="תמונה" id="FUImage" name="FUImage" accept=".png, .jpg, .jpeg" (change)="handleFileInput($event.target.files)">             </td>
           </tr>
           <tr>
-            <td style="text-align: center;">תוכן</td>
-            <td>          <img src="{{ImageBaseData}}" alt="Selected Image" height="200" width="100%">  
+            <td style="text-align: center;"></td>
+            <td><img src="{{ImageBaseData}}" alt="Selected Image" height="200" width="100">  
             </td>
           </tr>
           <tr>
-            <td style="text-align: center;">תוכן</td>
+            <td style="text-align: center;"></td>
             <td ><button style="align-self: center;" type="submit" style="text-align: center;margin:auto;">הוסף פוסט</button></td>
           </tr>
         </table>

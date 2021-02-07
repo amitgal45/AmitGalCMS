@@ -1,19 +1,19 @@
     <div dir="rtl" #myModal class="container" style="border-radius: 20px;" >
     <div class="content" *ngIf="post" style="border-radius: 20px;padding-bottom:10px;">
-      <h2 style="text-align: center;">הוספת תגובה</h2><br>
+      <h2 style="text-align: center;">עריכת פוסט</h2><br>
       <form (ngSubmit)="edit(f)" #f="ngForm">
-      <table>
+      <table style="margin:auto">
         <tr>
-          <td>כותרת:</td>
-          <td><input type="text" ngModel [(ngModel)]="post.title" name="title"  required></td>
+          <td>כותרת</td>
+          <td><input type="text" class="input_w" ngModel [(ngModel)]="post.title" name="title"  required></td>
         </tr>
         <tr>
-          <td>תיאור:</td>
-          <td><input type="text" ngModel [(ngModel)]="post.description" name="description" required ></td>
+          <td>תיאור</td>
+          <td><input class="input_w"  type="text" ngModel [(ngModel)]="post.description" name="description" required ></td>
         </tr>
         <tr>
           <td>תוכן:</td>
-          <td><input style="height: 50px;width:300px;padding-left:0;
+          <td><input class="input_w" style="height: 80px;padding-left:0;
             padding-top:0;
             padding-bottom:0.3em;
             padding-right: 0.3em;" type="text" ngModel [(ngModel)]="post.body" name="body" required ><br/>
@@ -22,12 +22,15 @@
         <tr>
           <td></td>
           <td>
-            <button style="margin-left:5px;" class="button" type="submit">ערוך פוסט</button>
-
-        <button (click)="close()">סגור</button>
+            
           </td>
         </tr>
       </table>
+      <div style="display: flex;justify-content: center;flex-direction: row;">
+        <button style="margin-left:5px;" class="button" type="submit">ערוך פוסט</button>
+
+    <button (click)="close()">סגור</button>
+  </div>
           </form>
           
     </div>
