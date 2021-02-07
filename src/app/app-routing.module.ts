@@ -39,7 +39,7 @@ const routes: Routes = [
   {
     path: 'forum', children: [
       { path: '', component: ForumComponent },
-      { path: ':id', component: ForumPostsComponent },
+      { path: ':id', component: ForumPostsComponent,canActivate:[AuthGuardService] },
       { path: ':id/addpost', component: AddpostComponent,canActivate:[AuthGuardService] },
       { path: 'post/:id', component: ForumPostComponent }
     ]
