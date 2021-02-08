@@ -1,23 +1,23 @@
 <div class="container" style="padding-top: 5px;">
 <div class="row topmenunew width" style="margin:auto;border-radius:20px;background-color: #FFF;justify-content: center;padding-top: 10px;padding-bottom: 10px;" >
     <div style="display: flex;justify-content: center;flex-wrap: wrap;">
-    <div class="col-xl-4 col" style="flex-direction: column;">
-        <div class="row " style="justify-content: center;background-color: #FFF;padding-right: 20px;padding-left: 20px;">
+    <div class="col-xl-5 col-sm-4 col-5" style="flex-direction: column;">
+        <div class="row " style="justify-content: center;background-color: #FFF;padding-right:10px;padding-left:10px;">
             <div class="col" >
                 <h3 style="padding:0px;margin:0px;">{{_article.name}}                </h3><br>
                 נכתב על ידי: {{_article.user.username}} <br>
-                תאריך: {{_article.createdAt|date:'yyyy-MM-dd'}}<br>
+                תאריך: {{_article.createdAt|date:'yyyy-mm-dd'}}<br>
                 קטגוריה: {{_article.category}} <br>
             </div>
         </div>
 
     </div>
-    <div class="col-xl-1 col-1">
+    <div class="col-xl-1 col-sm-1 col-1">
 
     </div>
-    <div class="col-xl-4 col-12" style="display: flex;align-items: center;justify-content: center;" >
-        <div class="topmenunew" style="display:flex;height:100%;width:100%;justify-content: center;align-items: center;">
-        <Img style="width:100%;padding-left:10px;padding-right:10px;" src="{{_article.picUrl}}"/>
+    <div class="col-xl-4 col-sm-4 col-12" style="display: flex;align-items: center;justify-content: center;" >
+        <div class="topmenunew" style="display:flex;width:100%;justify-content: center;align-items: center;">
+        <Img style="width:100%;padding-left:0px;padding-right:0px;" src="{{_article.picUrl}}"/>
         </div>
         
     </div>
@@ -27,7 +27,7 @@
     
 </div>
 <div style="display: flex;justify-content: center;">
-    <div class="col-9">
+    <div class="col-10">
    
         <div class="row" style="background-color: #FFF;">
             <div class="col"  >
