@@ -63,6 +63,7 @@ import { IsStuckPipe } from './_pipes/forum/is-stuck.pipe';
 import { TopPostsComponent } from './_components/forum/helper/top-posts/top-posts.component';
 import { TopUsersComponent } from './_components/forum/helper/top-users/top-users.component';
 import { SliderNoCategoryComponent } from './_components/helper/slider-no-category/slider-no-category.component';
+import { ArticleItemComponent } from './_components/article/article-item/article-item.component';
 
 
 export function tokenGetter() {
@@ -110,6 +111,7 @@ export function tokenGetter() {
     TopPostsComponent,
     TopUsersComponent,
     SliderNoCategoryComponent,
+    ArticleItemComponent,
     
   ],
   imports: [

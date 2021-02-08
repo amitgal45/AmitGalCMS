@@ -22,6 +22,7 @@ import { MainComponent } from './_components/ui/main/main.component';
 import { CatalogComponent } from './_components/products/catalog/catalog.component';
 import { GetproductComponent } from './_components/products/getproduct/getproduct.component';
 import { CartItemsComponent } from './_components/cart/cart-items/cart-items.component';
+import { ArticleItemComponent } from './_components/article/article-item/article-item.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,7 @@ const routes: Routes = [
 
   { path: '', component: MainComponent },
   { path: 'cart', component: CartItemsComponent,canActivate:[AuthGuardService] },
-
+  { path: 'article/:id', component: ArticleItemComponent },
   { path: 'products/catalog/:name', component: CatalogComponent },
   { path: 'products/:id', component: GetproductComponent,canActivate:[AuthGuardService] },
   { path: 'products', component: GetAllProductsComponent },

@@ -4,6 +4,8 @@ import { NgImageSliderComponent } from 'ng-image-slider';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/_models/product.model';
 import { ProductsService } from 'src/app/_services/products.service';
+import { ArticlesService } from 'src/app/_services/articles.service';
+import { Articles } from 'src/app/_models/article.model';
 
 @Component({
   selector: 'app-main',
@@ -13,11 +15,11 @@ import { ProductsService } from 'src/app/_services/products.service';
 export class MainComponent implements OnInit {
 
   category:string="גקטים";
-
+  articles:Array<Articles>=[];
   setCategory(category){
     this.category=category
   }
-  constructor(private ProductService:ProductsService) { }
+  constructor(private ProductService:ProductsService,private ArticlesService:ArticlesService) { }
   imageObject: Array<object> = [{
     image: 'https://i.picsum.photos/id/580/1020/600.jpg',
     thumbImage: 'https://i.picsum.photos/id/580/400/350.jpg',
@@ -71,6 +73,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.ProductService.getProducts().subscribe(async products=>this._products=products)
+    this.ArticlesService.getAllArticles().subscribe(val=>this.articles=val)
     this.productsSubscription = this.ProductService.productsUpdate.subscribe(async()=>{
       console.log('runs')
      this.ProductService.getProducts().subscribe(products=>this._products=products)
